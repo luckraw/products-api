@@ -1,6 +1,7 @@
 package com.example.products.model;
 
 import jakarta.persistence.*;
+
 import java.util.UUID;
 
 import java.io.Serializable;
@@ -10,9 +11,9 @@ import java.math.BigDecimal;
 @Table(name = "tb_products")
 public class ProductModel implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private static final long serialVersionUID = 1L;
     private UUID idProduct;
     private String name;
     private BigDecimal value;
